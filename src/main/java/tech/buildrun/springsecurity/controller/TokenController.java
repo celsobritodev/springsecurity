@@ -53,10 +53,10 @@ public class TokenController {
         var now = Instant.now();
         
         var claims = JwtClaimsSet.builder()
-                .issuer(ISSUER) // ✅ Usando constante
-                .subject(user.get().getUserId().toString())
-                .issuedAt(now)
-                .expiresAt(now.plusSeconds(TOKEN_EXPIRATION_SECONDS)) // ✅ Usando constante
+                .issuer(ISSUER) // ✅  Quem emitiu o token
+                .subject(user.get().getUserId().toString()) // id do usuario
+                .issuedAt(now)  // Data de criação
+                .expiresAt(now.plusSeconds(TOKEN_EXPIRATION_SECONDS)) // Expiracao
                 .build();
         
         var jwtValue = jwtEncoder.encode(JwtEncoderParameters.from(claims)).getTokenValue();

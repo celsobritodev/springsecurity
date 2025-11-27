@@ -16,6 +16,7 @@ public class Role {
 	@Column(name = "role_id")
 	private Long roleId;
 
+	@Column(unique = true, nullable = false) // ✅ ADICIONAR unique constraint
 	private String name;
 
 	public Long getRoleId() {

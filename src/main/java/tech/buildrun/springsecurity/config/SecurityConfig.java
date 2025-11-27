@@ -43,13 +43,13 @@ public class SecurityConfig {
 		return http.build();
 	}
 	
-	
+	// 🎯 FUNÇÃO PRINCIPAL: VERIFICAR TOKENS JWT
 	@Bean
 	public JwtDecoder jwtDecoder() {
 		return NimbusJwtDecoder.withPublicKey(publicKey).build();
 	}
 	
-	
+	// 🎯 FUNÇÃO PRINCIPAL: ASSINAR TOKENS JWT
 	@Bean
 	public JwtEncoder jwtEncoder() {
 		JWK jwk = new RSAKey.Builder(this.publicKey).privateKey(privateKey).build();
