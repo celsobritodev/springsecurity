@@ -34,7 +34,7 @@ public class TweetController {
     private static final String PARAM_PAGE = "page";
     private static final String PARAM_PAGE_SIZE = "pageSize";
     private static final String DEFAULT_PAGE = "0";
-    private static final String DEFAULT_PAGE_SIZE = "0";
+    private static final String DEFAULT_PAGE_SIZE = "10";
     private static final String SORT_FIELD = "creationTimestamp";
     private static final String ROLE_ADMIN = Role.UserRole.ADMIN.name();
     private static final String NOT_FOUND_MESSAGE = "Tweet not found";
@@ -47,6 +47,8 @@ public class TweetController {
         this.tweetRepository = tweetRepository;
     }
 
+   
+    // lista tweets
     @GetMapping(FEED_ENDPOINT)
     public ResponseEntity<FeedDto> feed(
             @RequestParam(value = PARAM_PAGE, defaultValue = DEFAULT_PAGE) int page,
@@ -68,6 +70,7 @@ public class TweetController {
                         tweets.getTotalElements()));
     }
 
+    // cria tweets
     @PostMapping(TWEETS_ENDPOINT)
     public ResponseEntity<Void> createTweet(@RequestBody CreateTweetDto dto, JwtAuthenticationToken token) {
         var user = userRepository.findById(UUID.fromString(token.getName()));
