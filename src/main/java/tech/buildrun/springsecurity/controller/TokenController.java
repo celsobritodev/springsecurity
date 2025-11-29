@@ -1,6 +1,7 @@
 package tech.buildrun.springsecurity.controller;
 
 import java.time.Instant;
+import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -16,6 +17,7 @@ import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 
 import tech.buildrun.springsecurity.controller.dto.LoginRequest;
 import tech.buildrun.springsecurity.controller.dto.LoginResponse;
+import tech.buildrun.springsecurity.entities.Role;
 import tech.buildrun.springsecurity.repository.UserRepository;
 
 
@@ -52,11 +54,18 @@ public class TokenController {
         
         var now = Instant.now();
         
+        var scopes = user.get().getRoles()
+        		.stream()
+        		.map(Role::getName)
+        		.collect(Collectors.joining(""));
+        
+        
         var claims = JwtClaimsSet.builder()
                 .issuer(ISSUER) // ✅  Quem emitiu o token
                 .subject(user.get().getUserId().toString()) // id do usuario
                 .issuedAt(now)  // Data de criação
                 .expiresAt(now.plusSeconds(TOKEN_EXPIRATION_SECONDS)) // Expiracao
+                .claim("scope", scopes)
                 .build();
         
         var jwtValue = jwtEncoder.encode(JwtEncoderParameters.from(claims)).getTokenValue();
