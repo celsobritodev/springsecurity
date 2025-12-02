@@ -30,7 +30,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiI1ZjBhZDE1OC1hNjc4LTQ1MDItYmVlYS1iMWU5ZjgyY2NjZTQiLCJleHAiOjE3NjQzNzY0MDMsImlhdCI6MTc2NDM3NjEwMywic2NvcGUiOiJCQVNJQyJ9.iSsOK-SqDj7bskLdrPzsL3KLQw2ijfngJUxrRHIfS3qTW9YUrAeb8c_D2ZOi_MEaB-60FHBMJlC8g72G6cEcl8gNyCPDcabdrWwIE9SERJPR2-DVpwk7pj1hbZ6-OuimLEUohieKkKFBqNRrinctYQ3AmPRWF42bDE64wf6uxZs6v5L3z83fIuzBm7GRqErm76kp3sEP68zYaExrZqctfPgXjzM5BaS2--aga0qUQFCJoyWVYUraz8CrcvVrGo_u5zc8KAVjeiQruDnGEoET84AG2Ys7RL0rwDuV1M1qxgtyAzXZBTeF30zWk3AhZR8n_CIsHvrrjDywaA6AkWd2Jw",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ2Mzc4OTcsImlhdCI6MTc2NDYzNzU5Nywic2NvcGUiOiJBRE1JTiJ9.ZSETv6b0Fz8WpMYR7WwRhYdbADhpbHT-4Y-ZmVdqY55uVJjhmTB6HYYPN1vLBMIvw3T6S7PtOzXEOQI3kiSQ961uL730RGeC8bTw1-WD_uTiNeNQtsf4-jvOq5SJMlbiM3fC820t7HbY0yJsmx9UbcmIhJgggHKdHn6ozvzFs_FsAmXi1X1_MMwXTnC06-Q5Np2mqBCNFvSPSODPVyDXTL15-9yfosGhkMqHqv8-P5QPqv8HQAdYPP_dM5b61NTrBwwb9KylzFtm5WexTmVsvHGqBigi_E8XLItZaBGFsq4y8JUsV4zDvWTdcWobxJp-9QxLA9TsbSl8nylneoZN4Q",
 							"type": "string"
 						}
 					]
@@ -73,7 +73,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiI1ZjBhZDE1OC1hNjc4LTQ1MDItYmVlYS1iMWU5ZjgyY2NjZTQiLCJleHAiOjE3NjQzNzY0MDMsImlhdCI6MTc2NDM3NjEwMywic2NvcGUiOiJCQVNJQyJ9.iSsOK-SqDj7bskLdrPzsL3KLQw2ijfngJUxrRHIfS3qTW9YUrAeb8c_D2ZOi_MEaB-60FHBMJlC8g72G6cEcl8gNyCPDcabdrWwIE9SERJPR2-DVpwk7pj1hbZ6-OuimLEUohieKkKFBqNRrinctYQ3AmPRWF42bDE64wf6uxZs6v5L3z83fIuzBm7GRqErm76kp3sEP68zYaExrZqctfPgXjzM5BaS2--aga0qUQFCJoyWVYUraz8CrcvVrGo_u5zc8KAVjeiQruDnGEoET84AG2Ys7RL0rwDuV1M1qxgtyAzXZBTeF30zWk3AhZR8n_CIsHvrrjDywaA6AkWd2Jw",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIyYmUxN2Y5ZS1lODdhLTRjYWYtOThjNS01ZTlkNmI3OGJlMWUiLCJleHAiOjE3NjQ2Mzc0NzIsImlhdCI6MTc2NDYzNzE3Miwic2NvcGUiOiJCQVNJQyJ9.hjf4DD3Pgo1g3Ny_EULQ5UXVV2Uh-6QmFk-HUTmFasFaJfEecNMqounoe6sWfGpMmFOOjefDcZNSeMQNrbO6jyI8O1faEOfKgqazCVREVRiu8mTodUvvRtnWdVLjTBVdjzIO6ZRFEkfi1SHQoCaqKALXLYj9ijtc1Wq04C7t-jUgr2JPNMchGXJaVAH2DlrHLkm1bzMMH1Lcqt6DdOJXBo75gOIFnnJo9TVUiw4TZyUej_D5tpSjAmrCSHtNT0YvXcOtW116CvtSuQV1ojXWklI2x8gJV-ViRPOKyDGsIZXvTEbX0uaIgCZxqjAhMTt_KJKkHr3PLXnVpeuPTpuPyg",
 							"type": "string"
 						}
 					]
@@ -81,12 +81,22 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/feed",
+					"raw": "{{base_url}}/feed?pageSize=1&page=3",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"feed"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						}
 					]
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -116,7 +126,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"username\": \"bruno\",\n\"password\": \"123\"\n}",
+					"raw": "{\n\"username\": \"admin\",\n\"password\": \"123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -162,7 +172,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"username\": \"bruno\",\n\"password\": \"123\"\n}",
+					"raw": "{\n\"username\": \"celso\",\n\"password\": \"789\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -206,7 +216,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiJmZDY3MDYyYi0yMTc2LTQzNjAtYjgyNy0wNzVkNDBiYjY2YWUiLCJleHAiOjE3NjQzODM3NTksImlhdCI6MTc2NDM4MzQ1OSwic2NvcGUiOiJCQVNJQyJ9.OCCkkjDovaKVTvUzBK4VZAgA1GObHZS-dbv1-HMcFW015wraSG0F2QSIlDk66EqsUX6A9sn20xpehTdya_f0uAVgyKo80dKM9pCoC2Un-4JOmAKKshcoaaqA4OYlsciLVn1B4OOo1U9fIp5r0EdOm_dtrVl7hnnKCbTWiSPKqfOAX5_5kGCP6zx4iD8VioQxItjLyTzIYUxL0Y54Cuva3chryLcR90ZICc-Te35kicTQa4Dg3tFMI7Q4yC6iYXcR1AE1AtAlvwvGjkgdnEzJO82cPTCVseZCISt3-4XdMwb9qXV8QW9F9vM1iDbMe66dlTMTZqIX9t3Yk5varA2fPQ",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIyYmUxN2Y5ZS1lODdhLTRjYWYtOThjNS01ZTlkNmI3OGJlMWUiLCJleHAiOjE3NjQ2MzY5NjUsImlhdCI6MTc2NDYzNjY2NSwic2NvcGUiOiJCQVNJQyJ9.BhM3zlCyWwxocWvPEa9RIo2cTG9jbbdgZzSV28Ha7ugdLzGV4ENaIbDh-dwMkOYmCF8PlNjkh80Ac9uSDVT1DIGiB7tUxvi40W8VTwXTDKgQL-sGJQBnka9iqI18sq2nNjbMLxYmI0Z8RcBtejIoDfinsEbM1yQrYyjTLpkhxEvRG0UBYnT0YbhfzfEgeCJXUNh252I51VwEY7XpQNVy5KPhJmAUEPL6DG-HwcXQTuAjOsQf01pYwhmmdAPsBawIlpRxbAgfEPxMLOYflLqqV2oJHeKhkGlK_EhVZfyxPjuURCovtizKZiZ45cQtyuTvB81ktR-7G55YG8Gj7VRAmQ",
 							"type": "string"
 						}
 					]
@@ -215,7 +225,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"content\": \"mais um tweet criado pelo bruno!\"\n}",
+					"raw": "{\n\t\"content\": \"e outro tweet criado por celso!\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

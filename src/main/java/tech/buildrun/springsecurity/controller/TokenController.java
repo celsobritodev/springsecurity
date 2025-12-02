@@ -56,7 +56,7 @@ public class TokenController {
         
         var scopes = user.get().getRoles()
         		.stream()
-        		.map(Role::getName)
+        		.map(Role::getName) // ← Adiciona prefixo
         		.collect(Collectors.joining(""));
         
         
