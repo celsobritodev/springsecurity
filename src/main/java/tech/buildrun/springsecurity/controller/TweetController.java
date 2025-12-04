@@ -52,8 +52,21 @@ public class TweetController {
     @GetMapping(FEED_ENDPOINT)
     public ResponseEntity<FeedDto> feed(
             @RequestParam(value = PARAM_PAGE, defaultValue = DEFAULT_PAGE) int page,
-            @RequestParam(value = PARAM_PAGE_SIZE, defaultValue = DEFAULT_PAGE_SIZE) int pageSize) {
-
+            @RequestParam(value = PARAM_PAGE_SIZE, defaultValue = DEFAULT_PAGE_SIZE) int pageSize,
+            JwtAuthenticationToken token) {
+        
+        System.out.println("=== DEBUG /feed ===");
+        System.out.println("Token recebido: " + (token != null ? "SIM" : "NÃO"));
+        
+        if (token != null) {
+            System.out.println("Token Name (subject): " + token.getName());
+            System.out.println("Token Principal: " + token.getPrincipal());
+            System.out.println("Token Authorities: " + token.getAuthorities());
+            System.out.println("Token Claims: " + token.getTokenAttributes());
+            System.out.println("Token Scopes: " + token.getTokenAttributes().get("scope"));
+        }
+        
+        // Resto do código original...
         var tweets = tweetRepository.findAll(
                 PageRequest.of(page, pageSize, Sort.Direction.DESC, SORT_FIELD))
                 .map(tweet -> new FeedItemDto(
@@ -61,6 +74,9 @@ public class TweetController {
                         tweet.getContent(),
                         tweet.getUser().getUsername()));
 
+        System.out.println("Total de tweets encontrados: " + tweets.getTotalElements());
+        System.out.println("=== FIM DEBUG /feed ===");
+        
         return ResponseEntity.ok(
                 new FeedDto(
                         tweets.getContent(),
@@ -69,6 +85,16 @@ public class TweetController {
                         tweets.getTotalPages(),
                         tweets.getTotalElements()));
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     // cria tweets
     @PostMapping(TWEETS_ENDPOINT)

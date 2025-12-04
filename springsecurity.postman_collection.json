@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "af509a42-6670-4842-8190-847dc6fec476",
 		"name": "springsecurity",
-		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "22901965"
 	},
@@ -30,7 +30,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ2Mzc4OTcsImlhdCI6MTc2NDYzNzU5Nywic2NvcGUiOiJBRE1JTiJ9.ZSETv6b0Fz8WpMYR7WwRhYdbADhpbHT-4Y-ZmVdqY55uVJjhmTB6HYYPN1vLBMIvw3T6S7PtOzXEOQI3kiSQ961uL730RGeC8bTw1-WD_uTiNeNQtsf4-jvOq5SJMlbiM3fC820t7HbY0yJsmx9UbcmIhJgggHKdHn6ozvzFs_FsAmXi1X1_MMwXTnC06-Q5Np2mqBCNFvSPSODPVyDXTL15-9yfosGhkMqHqv8-P5QPqv8HQAdYPP_dM5b61NTrBwwb9KylzFtm5WexTmVsvHGqBigi_E8XLItZaBGFsq4y8JUsV4zDvWTdcWobxJp-9QxLA9TsbSl8nylneoZN4Q",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
 							"type": "string"
 						}
 					]
@@ -73,7 +73,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIyYmUxN2Y5ZS1lODdhLTRjYWYtOThjNS01ZTlkNmI3OGJlMWUiLCJleHAiOjE3NjQ2Mzc0NzIsImlhdCI6MTc2NDYzNzE3Miwic2NvcGUiOiJCQVNJQyJ9.hjf4DD3Pgo1g3Ny_EULQ5UXVV2Uh-6QmFk-HUTmFasFaJfEecNMqounoe6sWfGpMmFOOjefDcZNSeMQNrbO6jyI8O1faEOfKgqazCVREVRiu8mTodUvvRtnWdVLjTBVdjzIO6ZRFEkfi1SHQoCaqKALXLYj9ijtc1Wq04C7t-jUgr2JPNMchGXJaVAH2DlrHLkm1bzMMH1Lcqt6DdOJXBo75gOIFnnJo9TVUiw4TZyUej_D5tpSjAmrCSHtNT0YvXcOtW116CvtSuQV1ojXWklI2x8gJV-ViRPOKyDGsIZXvTEbX0uaIgCZxqjAhMTt_KJKkHr3PLXnVpeuPTpuPyg",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
 							"type": "string"
 						}
 					]
@@ -81,7 +81,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/feed?pageSize=1&page=3",
+					"raw": "{{base_url}}/feed?pageSize=1&page=1",
 					"host": [
 						"{{base_url}}"
 					],
@@ -95,8 +95,51 @@
 						},
 						{
 							"key": "page",
-							"value": "3"
+							"value": "1"
 						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Teste",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/test-auth",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"test-auth"
 					]
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -147,6 +190,49 @@
 			"response": []
 		},
 		{
+			"name": "Refresh",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refreshToken\": \"01ff6451-49f3-450f-85d5-279a40e4f30b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/refresh",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"refresh"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
 			"name": "Create user",
 			"event": [
 				{
@@ -172,7 +258,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"username\": \"celso\",\n\"password\": \"789\"\n}",
+					"raw": "{\n\"username\": \"sandroka\",\n\"password\": \"1973\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -216,7 +302,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIyYmUxN2Y5ZS1lODdhLTRjYWYtOThjNS01ZTlkNmI3OGJlMWUiLCJleHAiOjE3NjQ2MzY5NjUsImlhdCI6MTc2NDYzNjY2NSwic2NvcGUiOiJCQVNJQyJ9.BhM3zlCyWwxocWvPEa9RIo2cTG9jbbdgZzSV28Ha7ugdLzGV4ENaIbDh-dwMkOYmCF8PlNjkh80Ac9uSDVT1DIGiB7tUxvi40W8VTwXTDKgQL-sGJQBnka9iqI18sq2nNjbMLxYmI0Z8RcBtejIoDfinsEbM1yQrYyjTLpkhxEvRG0UBYnT0YbhfzfEgeCJXUNh252I51VwEY7XpQNVy5KPhJmAUEPL6DG-HwcXQTuAjOsQf01pYwhmmdAPsBawIlpRxbAgfEPxMLOYflLqqV2oJHeKhkGlK_EhVZfyxPjuURCovtizKZiZ45cQtyuTvB81ktR-7G55YG8Gj7VRAmQ",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
 							"type": "string"
 						}
 					]
@@ -225,7 +311,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"content\": \"e outro tweet criado por celso!\"\n}",
+					"raw": "{\n\t\"content\": \"admin 04dez2025 10h08 \"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

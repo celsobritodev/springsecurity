@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict 4Wangsl1fOeiwjbDO3H1BWnHhTdYtbYvHOx7N4o45MmdlnsMzAQDmqpHP2CvGWW
+\restrict CN8PDOqnRaqRrbKhyD0g3QXHTFoaWWsBft47O49ai5ic19d6JhfLxVdAjcFjzi5
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
 
--- Started on 2025-12-01 22:22:13
+-- Started on 2025-12-04 10:16:30
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -24,6 +24,21 @@ SET row_security = off;
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
+
+--
+-- TOC entry 223 (class 1259 OID 548904)
+-- Name: tb_refreshtoken; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.tb_refreshtoken (
+    id uuid NOT NULL,
+    expiration timestamp(6) with time zone NOT NULL,
+    token character varying(255) NOT NULL,
+    user_id uuid NOT NULL
+);
+
+
+ALTER TABLE public.tb_refreshtoken OWNER TO postgres;
 
 --
 -- TOC entry 219 (class 1259 OID 508193)
@@ -111,7 +126,55 @@ CREATE TABLE public.tb_users_roles (
 ALTER TABLE public.tb_users_roles OWNER TO postgres;
 
 --
--- TOC entry 4816 (class 0 OID 508193)
+-- TOC entry 4828 (class 0 OID 548904)
+-- Dependencies: 223
+-- Data for Name: tb_refreshtoken; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.tb_refreshtoken (id, expiration, token, user_id) FROM stdin;
+da795c94-c507-4694-8784-4779c95be564	2025-12-31 23:00:10.591733-03	8c719bc1-4ef0-4387-be7f-aba5e13d395d	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+f6949cc5-bcd8-433b-8775-322bf5ee6816	2026-01-01 09:28:22.580336-03	07f8f367-b999-42e9-a996-cd6f37b6579e	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+3cc43a69-c8d7-470c-971a-ca0b530479b5	2026-01-01 09:34:56.914173-03	d3ef9e60-1893-4596-b492-e30afa4181e9	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+e1c27fb2-c417-4bcd-8b26-8a9b8b5bdef4	2026-01-01 09:36:09.820813-03	6a61111f-eba4-46a3-a985-14b752b1f696	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+ef36b9ad-27d9-4669-81c0-1996a60bb319	2026-01-01 09:42:37.418991-03	a4354935-a1c6-4f1f-8694-a248474c1c92	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+9dfe5457-42ae-45f2-8df5-aceb0425f21b	2026-01-01 10:02:21.833839-03	28070e73-5795-48c7-bf7e-4be18dcf4dd6	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+658bb816-a82b-42de-a15b-e1147b622b1c	2026-01-01 10:12:49.064117-03	2c870625-4d40-4189-981e-ca89bd102568	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+ad451b6b-b409-4995-a239-f5e4e20a0050	2026-01-01 10:19:59.816791-03	748cc2dd-c632-4812-b132-ad842a1158dc	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+9c4281bc-84d0-47ee-ac2d-a7d81c1a4621	2026-01-01 10:34:20.519418-03	0a849719-03ef-43fd-bb4e-6448b9853429	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+daaf02a3-5f88-46c1-a598-e96e03dd2172	2026-01-01 10:34:23.815657-03	2e1c363c-fc22-4324-b15d-1d7fc0f46c1a	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+7da70636-16c5-4e7a-be78-e640c54936bb	2026-01-01 10:39:48.617062-03	b6decdbe-19e7-489a-bce1-b2f0db0aa12f	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+52ad726e-c5ce-48da-9729-bd60e216b33f	2026-01-02 09:11:33.957015-03	2e919eb0-b3a3-4a73-bd0d-3883b2786388	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+d6e76cad-0d66-4ca4-8bad-803b58cbee1f	2026-01-02 09:13:10.448373-03	4d8c0d70-d529-4a07-804e-f289024edc84	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+9c33a0bf-13bb-4824-a3cb-d52b9864a7af	2026-01-02 09:15:34.198102-03	adc53d76-fc16-405f-a6e6-364fb6b27931	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+7a9c6480-139f-4d51-9f9d-196c2c8028f7	2026-01-03 07:33:32.18917-03	48e07be6-555a-4499-91c6-39b04a0c348f	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+fd6cb26b-aa89-422e-ad84-d17469e0b584	2026-01-03 07:49:28.808285-03	0f24fa82-f0be-4b3e-9055-5b1e029424b2	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+4b1deb4d-c056-4e2c-8797-33a62e3b5341	2026-01-03 07:49:53.399479-03	60f0c48b-a199-4088-9d93-d280f821dcfe	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+b9503f8d-7f65-45cf-b99a-8edfafb4e335	2026-01-03 07:57:46.696548-03	489547b0-f747-4e29-9789-82f8f9cd9d51	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+0bf5b579-fd60-48dc-a4c9-4884e159affc	2026-01-03 08:07:04.210224-03	0f7d6b49-b7d0-476a-9e70-c081e3c0b5ec	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+2c1b7c18-0521-4325-bf0d-a7e255503a61	2026-01-03 08:07:44.082042-03	6dd90606-dc0b-49b4-ba87-809023faa932	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+ec302bd6-c597-4d9a-83b2-81e40f6a0c9c	2026-01-03 08:08:57.27458-03	65af479a-5884-4e37-b106-9d22255bfd1d	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+4ce52a34-47f5-475e-9356-29327427631b	2026-01-03 08:09:01.04296-03	35a4c92e-f32a-489f-a793-63e323e9dac1	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+d2c74914-f1c5-46b1-b29d-3efd2ab467eb	2026-01-03 08:18:45.250124-03	7300fa05-a196-48bf-8adf-8846fc14744c	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+a9051b34-738a-4eec-bd8c-714eec126f8c	2026-01-03 08:26:59.580091-03	64bb93c0-267f-416c-b211-f6ae1f0f304c	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+173f1fe5-dc35-4a98-b99f-669490e6111c	2026-01-03 08:27:27.894728-03	6745f4e8-07f0-421d-ba5c-6b9d724a0856	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+47b86668-0a32-47de-80b8-98b6bd0499f7	2026-01-03 08:37:06.13642-03	a3070889-8128-4738-8667-265a4caaf370	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+5e7cedc9-26f2-4cac-96f0-426109ef383f	2026-01-03 08:37:12.417228-03	fd73bcdd-904b-4c71-b881-3a5c411512d5	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+1480fe67-15ec-49bc-8d1e-0dbc444c1c4a	2026-01-03 08:37:15.732377-03	8199c8c6-79e0-47f8-b767-1f269ea8c5e9	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+c00de20f-2aeb-464c-9ab9-95b7368acb41	2026-01-03 08:45:18.456668-03	10e42897-03bd-439d-ab9c-7087e699864c	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+793a1a47-fc47-4594-b09b-7705039b5173	2026-01-03 08:55:21.226088-03	01ff6451-49f3-450f-85d5-279a40e4f30b	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+e8a3f43f-c540-4336-ad75-8ade31ad0b95	2026-01-03 08:56:12.980687-03	61913c44-aa2a-4908-97bd-21a550a1ffbd	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+a390a7a6-c94d-4384-ac4d-338a9631e84d	2026-01-03 09:03:15.612813-03	ad67973b-a871-4b08-8675-df988f6a88cb	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+ce2c1aaf-23cc-4b96-af4c-26ccc1926b6f	2026-01-03 09:46:01.215953-03	d96d7181-b295-4300-a9a6-7ea8377490ed	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+511aebe6-05ce-48a3-bf0b-4c97cf81d83a	2026-01-03 09:46:11.212968-03	bf7f848e-cb43-44c3-8856-4ebce09c66ae	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+0a3db655-d343-47c2-8449-deaaca159cdf	2026-01-03 09:47:09.52871-03	39a35088-3265-48ac-ab58-044da5f90b79	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+49c5d581-50b4-44fb-b4d7-4afc565001f4	2026-01-03 09:54:51.181914-03	bdf7ee66-8bee-4524-ae4a-a76579f46f6c	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+d2b8e280-86ac-458b-a084-55bfd547f0da	2026-01-03 10:04:55.017207-03	86e2e4d1-cace-4da6-a652-287d425b24a4	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+398cd7a4-99ec-49b4-b727-51358a02caa5	2026-01-03 10:13:23.431132-03	cf10a6f4-9c0c-45a6-9351-2aed12c504fa	eff76d28-decf-4c6c-876b-3f6e9860ba1f
+\.
+
+
+--
+-- TOC entry 4824 (class 0 OID 508193)
 -- Dependencies: 219
 -- Data for Name: tb_roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -123,7 +186,7 @@ COPY public.tb_roles (role_id, name) FROM stdin;
 
 
 --
--- TOC entry 4817 (class 0 OID 508198)
+-- TOC entry 4825 (class 0 OID 508198)
 -- Dependencies: 220
 -- Data for Name: tb_tweets; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -133,11 +196,15 @@ COPY public.tb_tweets (tweet_id, content, creation_timestamp, user_id) FROM stdi
 102	mais um tweet criado pelo bruno!	2025-11-29 09:12:54.822598-03	fd67062b-2176-4360-b827-075d40bb66ae
 152	mais um tweet criado por celso!	2025-12-01 21:53:24.678951-03	2be17f9e-e87a-4caf-98c5-5e9d6b78be1e
 153	e outro tweet criado por celso!	2025-12-01 21:54:16.478109-03	2be17f9e-e87a-4caf-98c5-5e9d6b78be1e
+202	a outro tweet criado por admin!	2025-12-02 09:38:59.315883-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+252	admin na area de novo!	2025-12-02 10:15:04.999697-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+302	admin 10.35!	2025-12-02 10:35:46.046635-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+352	admin 04dez2025 10h08 	2025-12-04 10:08:34.251045-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 \.
 
 
 --
--- TOC entry 4818 (class 0 OID 508203)
+-- TOC entry 4826 (class 0 OID 508203)
 -- Dependencies: 221
 -- Data for Name: tb_users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -147,11 +214,12 @@ COPY public.tb_users (user_id, password, username) FROM stdin;
 5f0ad158-a678-4502-beea-b1e9f82ccce4	$2a$10$hEhArY1PlepMw1QAWnfVY.xzcUpwHIAEShj70FQZjZ5iWySCvQuGK	user
 fd67062b-2176-4360-b827-075d40bb66ae	$2a$10$BHn5IUD9IsVnapCs/4ai4./YpcyMJIv0HsL2ZUX0lc5cZqe5RPQ9a	bruno
 2be17f9e-e87a-4caf-98c5-5e9d6b78be1e	$2a$10$aOpClO2.OoGWwrUzedy2he29zGG3csYvGvPqtol7K.nLmjbj5uXme	celso
+eff76d28-decf-4c6c-876b-3f6e9860ba1f	$2a$10$z.nAZq7ehVVA2KD2Qy1ezO/815Znd5FsKdLG/4v226Gt54kkpvz26	sandroka
 \.
 
 
 --
--- TOC entry 4819 (class 0 OID 508210)
+-- TOC entry 4827 (class 0 OID 508210)
 -- Dependencies: 222
 -- Data for Name: tb_users_roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -161,11 +229,12 @@ COPY public.tb_users_roles (user_id, role_id) FROM stdin;
 5f0ad158-a678-4502-beea-b1e9f82ccce4	2
 fd67062b-2176-4360-b827-075d40bb66ae	2
 2be17f9e-e87a-4caf-98c5-5e9d6b78be1e	2
+eff76d28-decf-4c6c-876b-3f6e9860ba1f	2
 \.
 
 
 --
--- TOC entry 4825 (class 0 OID 0)
+-- TOC entry 4834 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: tb_roles_role_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -174,16 +243,25 @@ SELECT pg_catalog.setval('public.tb_roles_role_id_seq', 2, true);
 
 
 --
--- TOC entry 4826 (class 0 OID 0)
+-- TOC entry 4835 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: tb_tweets_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.tb_tweets_seq', 201, true);
+SELECT pg_catalog.setval('public.tb_tweets_seq', 401, true);
 
 
 --
--- TOC entry 4655 (class 2606 OID 508197)
+-- TOC entry 4671 (class 2606 OID 548908)
+-- Name: tb_refreshtoken tb_refreshtoken_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tb_refreshtoken
+    ADD CONSTRAINT tb_refreshtoken_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4659 (class 2606 OID 508197)
 -- Name: tb_roles tb_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -192,7 +270,7 @@ ALTER TABLE ONLY public.tb_roles
 
 
 --
--- TOC entry 4659 (class 2606 OID 508202)
+-- TOC entry 4663 (class 2606 OID 508202)
 -- Name: tb_tweets tb_tweets_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -201,7 +279,7 @@ ALTER TABLE ONLY public.tb_tweets
 
 
 --
--- TOC entry 4661 (class 2606 OID 508209)
+-- TOC entry 4665 (class 2606 OID 508209)
 -- Name: tb_users tb_users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -210,7 +288,7 @@ ALTER TABLE ONLY public.tb_users
 
 
 --
--- TOC entry 4665 (class 2606 OID 508214)
+-- TOC entry 4669 (class 2606 OID 508214)
 -- Name: tb_users_roles tb_users_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -219,7 +297,7 @@ ALTER TABLE ONLY public.tb_users_roles
 
 
 --
--- TOC entry 4657 (class 2606 OID 508216)
+-- TOC entry 4661 (class 2606 OID 508216)
 -- Name: tb_roles uk8ghpmg7galg4xu5qu0feu2cmi; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -228,7 +306,7 @@ ALTER TABLE ONLY public.tb_roles
 
 
 --
--- TOC entry 4663 (class 2606 OID 508218)
+-- TOC entry 4667 (class 2606 OID 508218)
 -- Name: tb_users uk8n82lwp7lflhwda2v2v3wckc9; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -237,7 +315,16 @@ ALTER TABLE ONLY public.tb_users
 
 
 --
--- TOC entry 4667 (class 2606 OID 508229)
+-- TOC entry 4673 (class 2606 OID 548910)
+-- Name: tb_refreshtoken ukdis2d9uh6810rtsujb61a79dh; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tb_refreshtoken
+    ADD CONSTRAINT ukdis2d9uh6810rtsujb61a79dh UNIQUE (token);
+
+
+--
+-- TOC entry 4675 (class 2606 OID 508229)
 -- Name: tb_users_roles fk5xc4yvfrjcy8bl01kq3crp8pg; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -246,7 +333,7 @@ ALTER TABLE ONLY public.tb_users_roles
 
 
 --
--- TOC entry 4666 (class 2606 OID 508219)
+-- TOC entry 4674 (class 2606 OID 508219)
 -- Name: tb_tweets fk8igcgf9ddaocdlg9c8scf01vm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -255,7 +342,7 @@ ALTER TABLE ONLY public.tb_tweets
 
 
 --
--- TOC entry 4668 (class 2606 OID 508224)
+-- TOC entry 4676 (class 2606 OID 508224)
 -- Name: tb_users_roles fkj5qged12p22eloqw5g4f9hm2e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -263,11 +350,11 @@ ALTER TABLE ONLY public.tb_users_roles
     ADD CONSTRAINT fkj5qged12p22eloqw5g4f9hm2e FOREIGN KEY (role_id) REFERENCES public.tb_roles(role_id);
 
 
--- Completed on 2025-12-01 22:22:15
+-- Completed on 2025-12-04 10:16:31
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 4Wangsl1fOeiwjbDO3H1BWnHhTdYtbYvHOx7N4o45MmdlnsMzAQDmqpHP2CvGWW
+\unrestrict CN8PDOqnRaqRrbKhyD0g3QXHTFoaWWsBft47O49ai5ic19d6JhfLxVdAjcFjzi5
 
