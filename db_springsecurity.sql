@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict FQKwB2f3od1QNajvBdr1VROiPJOs2EIDXtbjN7BalU3NSyDp6GydjpC1nyPHNar
+\restrict psXxqqGh3meuvgY6KYq9RyKDU5N05srdnTzsScZAVpXvD7U237WCdrU04dr15km
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
 
--- Started on 2025-12-04 21:46:04
+-- Started on 2025-12-05 09:20:03
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -126,7 +126,7 @@ CREATE TABLE public.tb_users_roles (
 ALTER TABLE public.tb_users_roles OWNER TO postgres;
 
 --
--- TOC entry 4828 (class 0 OID 548904)
+-- TOC entry 4823 (class 0 OID 548904)
 -- Dependencies: 223
 -- Data for Name: tb_refreshtoken; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -175,11 +175,15 @@ ad3f2beb-a2cd-4aac-969c-03a9700e1a91	2026-01-03 21:07:33.7907-03	c04486e6-8050-4
 a7ba788b-27f8-429b-959c-dd4f26122cf7	2026-01-03 21:07:40.270962-03	60e1c0c6-25f8-444f-b78f-17427c3df55a	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 d4942ab3-46a7-4ac0-970c-9af6f289e19f	2026-01-03 21:15:20.679932-03	5a346aaf-8013-4c41-9419-0bb053e1690f	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 cad1fd31-6d4d-47e2-bc07-ddb42ff9c15c	2026-01-03 21:15:24.395566-03	bf485125-190b-4839-b1b5-bcf06afc4580	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+8c40cc9d-a71b-45d4-990a-c3ee6293532b	2026-01-04 08:55:31.463088-03	93e0a69a-1dc3-438a-a939-c467edeabaa6	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+f5fc1393-02f9-43eb-b52e-fc189b800905	2026-01-04 08:55:50.817951-03	e028cca1-46df-4eeb-b964-2e4c0dabeb9e	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+e0b0acda-4fad-48ee-8d6f-b1b12d7adfed	2026-01-04 08:56:05.895195-03	b80f5839-eb5b-423d-ba38-223e1af1998b	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+d4df20d7-f963-4d79-a125-8c66cd6ade71	2026-01-04 08:59:27.264718-03	c713c3b6-89a2-4d55-9188-6cf6122cec06	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 \.
 
 
 --
--- TOC entry 4824 (class 0 OID 508193)
+-- TOC entry 4819 (class 0 OID 508193)
 -- Dependencies: 219
 -- Data for Name: tb_roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -191,7 +195,7 @@ COPY public.tb_roles (role_id, name) FROM stdin;
 
 
 --
--- TOC entry 4825 (class 0 OID 508198)
+-- TOC entry 4820 (class 0 OID 508198)
 -- Dependencies: 220
 -- Data for Name: tb_tweets; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -211,7 +215,7 @@ COPY public.tb_tweets (tweet_id, content, creation_timestamp, user_id) FROM stdi
 
 
 --
--- TOC entry 4826 (class 0 OID 508203)
+-- TOC entry 4821 (class 0 OID 508203)
 -- Dependencies: 221
 -- Data for Name: tb_users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -229,7 +233,7 @@ c63d0958-c766-4616-b305-a63cfb950071	$2a$10$xKj9Vo24WybdOV8OVaFqzOCgX.taqBuIvzQD
 
 
 --
--- TOC entry 4827 (class 0 OID 508210)
+-- TOC entry 4822 (class 0 OID 508210)
 -- Dependencies: 222
 -- Data for Name: tb_users_roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -247,7 +251,7 @@ c63d0958-c766-4616-b305-a63cfb950071	2
 
 
 --
--- TOC entry 4834 (class 0 OID 0)
+-- TOC entry 4829 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: tb_roles_role_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -256,7 +260,7 @@ SELECT pg_catalog.setval('public.tb_roles_role_id_seq', 2, true);
 
 
 --
--- TOC entry 4835 (class 0 OID 0)
+-- TOC entry 4830 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: tb_tweets_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -265,7 +269,7 @@ SELECT pg_catalog.setval('public.tb_tweets_seq', 501, true);
 
 
 --
--- TOC entry 4671 (class 2606 OID 548908)
+-- TOC entry 4666 (class 2606 OID 548908)
 -- Name: tb_refreshtoken tb_refreshtoken_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -274,7 +278,7 @@ ALTER TABLE ONLY public.tb_refreshtoken
 
 
 --
--- TOC entry 4659 (class 2606 OID 508197)
+-- TOC entry 4654 (class 2606 OID 508197)
 -- Name: tb_roles tb_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -283,7 +287,7 @@ ALTER TABLE ONLY public.tb_roles
 
 
 --
--- TOC entry 4663 (class 2606 OID 508202)
+-- TOC entry 4658 (class 2606 OID 508202)
 -- Name: tb_tweets tb_tweets_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -292,7 +296,7 @@ ALTER TABLE ONLY public.tb_tweets
 
 
 --
--- TOC entry 4665 (class 2606 OID 508209)
+-- TOC entry 4660 (class 2606 OID 508209)
 -- Name: tb_users tb_users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -301,7 +305,7 @@ ALTER TABLE ONLY public.tb_users
 
 
 --
--- TOC entry 4669 (class 2606 OID 508214)
+-- TOC entry 4664 (class 2606 OID 508214)
 -- Name: tb_users_roles tb_users_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -310,7 +314,7 @@ ALTER TABLE ONLY public.tb_users_roles
 
 
 --
--- TOC entry 4661 (class 2606 OID 508216)
+-- TOC entry 4656 (class 2606 OID 508216)
 -- Name: tb_roles uk8ghpmg7galg4xu5qu0feu2cmi; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -319,7 +323,7 @@ ALTER TABLE ONLY public.tb_roles
 
 
 --
--- TOC entry 4667 (class 2606 OID 508218)
+-- TOC entry 4662 (class 2606 OID 508218)
 -- Name: tb_users uk8n82lwp7lflhwda2v2v3wckc9; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -328,7 +332,7 @@ ALTER TABLE ONLY public.tb_users
 
 
 --
--- TOC entry 4673 (class 2606 OID 548910)
+-- TOC entry 4668 (class 2606 OID 548910)
 -- Name: tb_refreshtoken ukdis2d9uh6810rtsujb61a79dh; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -337,7 +341,7 @@ ALTER TABLE ONLY public.tb_refreshtoken
 
 
 --
--- TOC entry 4675 (class 2606 OID 508229)
+-- TOC entry 4670 (class 2606 OID 508229)
 -- Name: tb_users_roles fk5xc4yvfrjcy8bl01kq3crp8pg; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -346,7 +350,7 @@ ALTER TABLE ONLY public.tb_users_roles
 
 
 --
--- TOC entry 4674 (class 2606 OID 508219)
+-- TOC entry 4669 (class 2606 OID 508219)
 -- Name: tb_tweets fk8igcgf9ddaocdlg9c8scf01vm; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -355,7 +359,7 @@ ALTER TABLE ONLY public.tb_tweets
 
 
 --
--- TOC entry 4676 (class 2606 OID 508224)
+-- TOC entry 4671 (class 2606 OID 508224)
 -- Name: tb_users_roles fkj5qged12p22eloqw5g4f9hm2e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -363,11 +367,11 @@ ALTER TABLE ONLY public.tb_users_roles
     ADD CONSTRAINT fkj5qged12p22eloqw5g4f9hm2e FOREIGN KEY (role_id) REFERENCES public.tb_roles(role_id);
 
 
--- Completed on 2025-12-04 21:46:04
+-- Completed on 2025-12-05 09:20:03
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict FQKwB2f3od1QNajvBdr1VROiPJOs2EIDXtbjN7BalU3NSyDp6GydjpC1nyPHNar
+\unrestrict psXxqqGh3meuvgY6KYq9RyKDU5N05srdnTzsScZAVpXvD7U237WCdrU04dr15km
 
