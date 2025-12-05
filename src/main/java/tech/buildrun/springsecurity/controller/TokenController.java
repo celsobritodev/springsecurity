@@ -29,7 +29,7 @@ import tech.buildrun.springsecurity.repository.UserRepository;
 public class TokenController {
 
     private static final String ISSUER = "mybackend";
-    private static final long ACCESS_TOKEN_EXPIRATION = 600L;   // 10 min
+    private static final long ACCESS_TOKEN_EXPIRATION = 300L;   // 5 min
     private static final long REFRESH_TOKEN_EXPIRATION_DAYS = 30;
 
     private static final String INVALID_CREDENTIALS = "user or password is invalid";
@@ -139,6 +139,8 @@ public class TokenController {
                 .ifPresent(refreshTokenRepository::delete);
         return ResponseEntity.ok().build();
     }
+    
+    
     
     @GetMapping("/test-auth")
     public String testAuth(JwtAuthenticationToken token) {

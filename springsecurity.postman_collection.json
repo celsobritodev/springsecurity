@@ -30,7 +30,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTQ4MTMsImlhdCI6MTc2NDg5NDUxMywic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.ZgWFhqtONcNIcYKLJZ3BPrBAPoSvaaaq1bOrYS6bSvkz9_drfxStZzbhYTmC5FlmP48u7Hi9jZ-biWOuNfzrEKjOzZvcoQIIs48TMj5eVBrs6aqlGCj_222arvNc0JvbxUQs7uDKpNkQSCHlyCCQCwfq4xRJmKRFio4q87iu9GSiGnMyvnxeoJTTs9bZC_jx597DoWimzcYuZtEOAPuD-ocNL8NWXSV6nLSX8hO2m_PYUtcuS0psIsQL9GjfKXpTHa0MItGHOY-jAD2MbjGffdajktHipgV1-IfM8rlwehjO9FBhuzdcauNudpR_7xk5eyjQsoZTYHasBn1tkt5DpA",
 							"type": "string"
 						}
 					]
@@ -73,7 +73,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTQ4MTMsImlhdCI6MTc2NDg5NDUxMywic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.ZgWFhqtONcNIcYKLJZ3BPrBAPoSvaaaq1bOrYS6bSvkz9_drfxStZzbhYTmC5FlmP48u7Hi9jZ-biWOuNfzrEKjOzZvcoQIIs48TMj5eVBrs6aqlGCj_222arvNc0JvbxUQs7uDKpNkQSCHlyCCQCwfq4xRJmKRFio4q87iu9GSiGnMyvnxeoJTTs9bZC_jx597DoWimzcYuZtEOAPuD-ocNL8NWXSV6nLSX8hO2m_PYUtcuS0psIsQL9GjfKXpTHa0MItGHOY-jAD2MbjGffdajktHipgV1-IfM8rlwehjO9FBhuzdcauNudpR_7xk5eyjQsoZTYHasBn1tkt5DpA",
 							"type": "string"
 						}
 					]
@@ -126,7 +126,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTQ4MTMsImlhdCI6MTc2NDg5NDUxMywic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.ZgWFhqtONcNIcYKLJZ3BPrBAPoSvaaaq1bOrYS6bSvkz9_drfxStZzbhYTmC5FlmP48u7Hi9jZ-biWOuNfzrEKjOzZvcoQIIs48TMj5eVBrs6aqlGCj_222arvNc0JvbxUQs7uDKpNkQSCHlyCCQCwfq4xRJmKRFio4q87iu9GSiGnMyvnxeoJTTs9bZC_jx597DoWimzcYuZtEOAPuD-ocNL8NWXSV6nLSX8hO2m_PYUtcuS0psIsQL9GjfKXpTHa0MItGHOY-jAD2MbjGffdajktHipgV1-IfM8rlwehjO9FBhuzdcauNudpR_7xk5eyjQsoZTYHasBn1tkt5DpA",
 							"type": "string"
 						}
 					]
@@ -190,6 +190,59 @@
 			"response": []
 		},
 		{
+			"name": "Logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTQ2NDgsImlhdCI6MTc2NDg5NDM0OCwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.UJ8-zXO0d7uZwjsz0Z2oHHocCjt3qNlp5Cb5aM0bDXRH2CqRRC7FQMrAXElAzqIoYx2O_fCt1iLrWLtYQxs_IyQ1pzXs2wzi5Eqg8jZrBDJzWKPsViXanfqJVjZZo8o_OodTgKuzSj265_iHuWVxJ8UYcs9g1hwoEAaiCTkh0bHMiooa-nAQkyc08NQ99DBzUzFEgKtUknzApFj1UnewNOMDdZ2kVqpbdBH2qNNKVgEviioYadWpoYc_2hS68RpSABMVEnBDLQ-_Y9_OorStJ4h_SBu0Axn2BVLSg0piXTq6_bld9u_XnkWMeDg6g2gNAbIFZOc5xqFt5Nyy6mFaSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refreshToken\": \"e5eea1bf-b381-440d-b993-02e6403a8521\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"logout"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
 			"name": "Refresh",
 			"event": [
 				{
@@ -212,7 +265,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"refreshToken\": \"01ff6451-49f3-450f-85d5-279a40e4f30b\"\n}",
+					"raw": "{\n  \"refreshToken\": \"752fb806-4489-40cf-9c9d-2b78942cb45a\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -252,13 +305,20 @@
 			],
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTIzODksImlhdCI6MTc2NDg5MjA4OSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.MBq3hwaLm8EKgfD1J_c8ET9ocoxdPjoQXfcSDPhgxzFvhOOtqT1XfGofwiFIgY2bzZLDmEdU0OzUGYPLQ31sRbrlNhEBWc43UB38haB_yzr7ucJyPcGjJke0ilybhD7s_6h9Bqao-pjIeLy17p5GGZJtNdHTLwJVJoiD3qAmtplRiLnPexO-cZdLahfwA9bnnjcbkUbXapRuqxbNkQLnwL5h0W2i4D9E5Pwxt6YcU99xgfwWhsJ-DVYTVmP-1l3cHsci79HRZLlGys3gBEGevF5wP-MBVWI0KJiY90TsWMuBenBw1d6rAAdS6Ev3QmFzKbIdy8vuCxhOrxzwKf-hJg",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"username\": \"sandroka\",\n\"password\": \"1973\"\n}",
+					"raw": "{\n\"username\": \"keké\",\n\"password\": \"1971\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -302,7 +362,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4NTQwOTUsImlhdCI6MTc2NDg1MzQ5NSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.wzIr-mWggnenl1yp026IJ-AGtZZQDeJO3G8gVA-_xc-B9unEakUy6Ogpd5Qjt1BGrz0ZmAPNUbywWRk3cYu0V93PNVpdD7dYIC0g6XfNznpgoA3aVgAwiumEm2gZG0qWEr5g_J4nFRMkZDc-d-xwAq20ydM72zh8m_09gyvvFiXq2YSTpBawCBACmB64DMXYHlcf9E35vsO-xSDufbtyipCUqzb3vLVNqxK6GLPDaZOC1gPPD9PLMfIuigJW-R5TVDNGcRck5eOXTs9rtAK6hbd8G4qUkX2r52e8yZDCAW7jCgZQnP9CR0tPyOzoaIPTXg3wQkp0TPn2Io9EiQ2UTA",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTIzODksImlhdCI6MTc2NDg5MjA4OSwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.MBq3hwaLm8EKgfD1J_c8ET9ocoxdPjoQXfcSDPhgxzFvhOOtqT1XfGofwiFIgY2bzZLDmEdU0OzUGYPLQ31sRbrlNhEBWc43UB38haB_yzr7ucJyPcGjJke0ilybhD7s_6h9Bqao-pjIeLy17p5GGZJtNdHTLwJVJoiD3qAmtplRiLnPexO-cZdLahfwA9bnnjcbkUbXapRuqxbNkQLnwL5h0W2i4D9E5Pwxt6YcU99xgfwWhsJ-DVYTVmP-1l3cHsci79HRZLlGys3gBEGevF5wP-MBVWI0KJiY90TsWMuBenBw1d6rAAdS6Ev3QmFzKbIdy8vuCxhOrxzwKf-hJg",
 							"type": "string"
 						}
 					]
@@ -311,7 +371,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"content\": \"admin 04dez2025 10h08 \"\n}",
+					"raw": "{\n\t\"content\": \"admin twetando por aí \"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

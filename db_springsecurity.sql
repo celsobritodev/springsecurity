@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict CN8PDOqnRaqRrbKhyD0g3QXHTFoaWWsBft47O49ai5ic19d6JhfLxVdAjcFjzi5
+\restrict FQKwB2f3od1QNajvBdr1VROiPJOs2EIDXtbjN7BalU3NSyDp6GydjpC1nyPHNar
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
 
--- Started on 2025-12-04 10:16:30
+-- Started on 2025-12-04 21:46:04
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -170,6 +170,11 @@ ce2c1aaf-23cc-4b96-af4c-26ccc1926b6f	2026-01-03 09:46:01.215953-03	d96d7181-b295
 49c5d581-50b4-44fb-b4d7-4afc565001f4	2026-01-03 09:54:51.181914-03	bdf7ee66-8bee-4524-ae4a-a76579f46f6c	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 d2b8e280-86ac-458b-a084-55bfd547f0da	2026-01-03 10:04:55.017207-03	86e2e4d1-cace-4da6-a652-287d425b24a4	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 398cd7a4-99ec-49b4-b727-51358a02caa5	2026-01-03 10:13:23.431132-03	cf10a6f4-9c0c-45a6-9351-2aed12c504fa	eff76d28-decf-4c6c-876b-3f6e9860ba1f
+4f6a9ac6-55b8-41f9-9697-923ec03643c7	2026-01-03 20:36:40.640431-03	752fb806-4489-40cf-9c9d-2b78942cb45a	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+ad3f2beb-a2cd-4aac-969c-03a9700e1a91	2026-01-03 21:07:33.7907-03	c04486e6-8050-40e1-b3e8-64be23f1c101	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+a7ba788b-27f8-429b-959c-dd4f26122cf7	2026-01-03 21:07:40.270962-03	60e1c0c6-25f8-444f-b78f-17427c3df55a	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+d4942ab3-46a7-4ac0-970c-9af6f289e19f	2026-01-03 21:15:20.679932-03	5a346aaf-8013-4c41-9419-0bb053e1690f	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+cad1fd31-6d4d-47e2-bc07-ddb42ff9c15c	2026-01-03 21:15:24.395566-03	bf485125-190b-4839-b1b5-bcf06afc4580	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 \.
 
 
@@ -200,6 +205,8 @@ COPY public.tb_tweets (tweet_id, content, creation_timestamp, user_id) FROM stdi
 252	admin na area de novo!	2025-12-02 10:15:04.999697-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 302	admin 10.35!	2025-12-02 10:35:46.046635-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 352	admin 04dez2025 10h08 	2025-12-04 10:08:34.251045-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+402	admin twetando por aí 	2025-12-04 20:52:38.741093-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
+452	tweet do admin as 21h31 de 04dez2025 	2025-12-04 21:31:18.272392-03	1ae276bc-19b9-44b4-b5c7-b02bd1426dc4
 \.
 
 
@@ -215,6 +222,9 @@ COPY public.tb_users (user_id, password, username) FROM stdin;
 fd67062b-2176-4360-b827-075d40bb66ae	$2a$10$BHn5IUD9IsVnapCs/4ai4./YpcyMJIv0HsL2ZUX0lc5cZqe5RPQ9a	bruno
 2be17f9e-e87a-4caf-98c5-5e9d6b78be1e	$2a$10$aOpClO2.OoGWwrUzedy2he29zGG3csYvGvPqtol7K.nLmjbj5uXme	celso
 eff76d28-decf-4c6c-876b-3f6e9860ba1f	$2a$10$z.nAZq7ehVVA2KD2Qy1ezO/815Znd5FsKdLG/4v226Gt54kkpvz26	sandroka
+c63d0958-c766-4616-b305-a63cfb950071	$2a$10$xKj9Vo24WybdOV8OVaFqzOCgX.taqBuIvzQDTmRvRL3HlZZDj0ydK	carlota
+9f253336-2345-403e-81de-d82e2d5f200f	$2a$10$IeVzWmK9Gf.5wDfianoOS.Uu5DXsw.VNfuGxj7sUzAUB/J.b4CaUS	keké
+6c60b32a-7985-42fa-8d9b-b1b3e4877571	$2a$10$fM18.1xS6s7rzKzzEyE/0uhAhas6N9Ovd5ZP.qAaH6NDSIOYwtYrG	maria rita
 \.
 
 
@@ -230,6 +240,9 @@ COPY public.tb_users_roles (user_id, role_id) FROM stdin;
 fd67062b-2176-4360-b827-075d40bb66ae	2
 2be17f9e-e87a-4caf-98c5-5e9d6b78be1e	2
 eff76d28-decf-4c6c-876b-3f6e9860ba1f	2
+c63d0958-c766-4616-b305-a63cfb950071	2
+9f253336-2345-403e-81de-d82e2d5f200f	2
+6c60b32a-7985-42fa-8d9b-b1b3e4877571	2
 \.
 
 
@@ -248,7 +261,7 @@ SELECT pg_catalog.setval('public.tb_roles_role_id_seq', 2, true);
 -- Name: tb_tweets_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.tb_tweets_seq', 401, true);
+SELECT pg_catalog.setval('public.tb_tweets_seq', 501, true);
 
 
 --
@@ -350,11 +363,11 @@ ALTER TABLE ONLY public.tb_users_roles
     ADD CONSTRAINT fkj5qged12p22eloqw5g4f9hm2e FOREIGN KEY (role_id) REFERENCES public.tb_roles(role_id);
 
 
--- Completed on 2025-12-04 10:16:31
+-- Completed on 2025-12-04 21:46:04
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict CN8PDOqnRaqRrbKhyD0g3QXHTFoaWWsBft47O49ai5ic19d6JhfLxVdAjcFjzi5
+\unrestrict FQKwB2f3od1QNajvBdr1VROiPJOs2EIDXtbjN7BalU3NSyDp6GydjpC1nyPHNar
 

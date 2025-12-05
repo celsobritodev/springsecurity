@@ -1,16 +1,11 @@
 package tech.buildrun.springsecurity.config;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -59,22 +54,32 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+            // ✅ DESLIGA TUDO QUE CAUSA O REDIRECT 302
+            .csrf(csrf -> csrf.disable())
+            .formLogin(form -> form.disable())      // ✅ MUITO IMPORTANTE
+            .httpBasic(basic -> basic.disable())    // ✅ MUITO IMPORTANTE
+            .logout(logout -> logout.disable())     // ✅ ISSO RESOLVE SEU PROBLEMA
+
+            // ✅ CONTROLE DE ROTAS
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/users", "/login", "/refresh").permitAll()
+                .requestMatchers(HttpMethod.POST, "/login", "/refresh").permitAll()
                 .anyRequest().authenticated()
             )
-            .csrf(csrf -> csrf.disable())
+
+            // ✅ JWT
             .oauth2ResourceServer(oauth2 -> oauth2
                 .jwt(jwt -> jwt
-                    .decoder(jwtDecoder()) // ✅ FORÇA usar seu decoder
-                    .jwtAuthenticationConverter(jwtAuthenticationConverter()) // ✅ FORÇA usar seu converter
+                    .decoder(jwtDecoder())
+                    .jwtAuthenticationConverter(jwtAuthenticationConverter())
                 )
             )
+
+            // ✅ API STATELESS
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         return http.build();
     }
-    
+
     
     
     
