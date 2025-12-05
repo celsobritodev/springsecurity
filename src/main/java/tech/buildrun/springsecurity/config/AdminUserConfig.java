@@ -12,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 import tech.buildrun.springsecurity.repository.RoleRepository;
 import tech.buildrun.springsecurity.repository.UserRepository;
 
+
+//“Esse código roda automaticamente quando a aplicação Spring inicia.”
 @Configuration
 public class AdminUserConfig implements CommandLineRunner {
     
