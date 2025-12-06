@@ -1,6 +1,8 @@
 package tech.buildrun.springsecurity.controller.dto;
 
+import tech.buildrun.springsecurity.services.TokenService.RefreshStatus;
+
 public record RefreshStatusResponse(
-	    String status,
+	    RefreshStatus status,
 	    String mensagem
 	) {}

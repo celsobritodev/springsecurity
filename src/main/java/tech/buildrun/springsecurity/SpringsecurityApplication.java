@@ -7,6 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Guia Definitivo: Spring Security 6 + JWT + OAUTH 2 | AUTENTICAÇÃO NA PRÁTICA
 // https://youtu.be/nDst-CRKt_k
 
+
+// ESTE CODIGO NÃO É MAIS O ORIGINAL
+// FIZ VARIAS IMPLEMENTACOES COM O USO DE IA
+
 @SpringBootApplication
 public class SpringsecurityApplication {
 
