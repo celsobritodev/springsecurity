@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import tech.buildrun.springsecurity.controller.dto.LoginRequest;
 import tech.buildrun.springsecurity.controller.dto.LoginResponse;
 import tech.buildrun.springsecurity.controller.dto.RefreshRequest;
+import tech.buildrun.springsecurity.controller.dto.RefreshStatusResponse;
 import tech.buildrun.springsecurity.entities.RefreshToken;
 import tech.buildrun.springsecurity.repository.RefreshTokenRepository;
 import tech.buildrun.springsecurity.repository.UserRepository;
@@ -33,6 +34,8 @@ public class TokenController {
     private static final String REFRESH_ENDPOINT = "/refresh";
     private static final String LOGOUT_ENDPOINT = "/logout";
     private static final String TEST_AUTH_ENDPOINT = "/test-auth";
+    private static final String REFRESH_STATUS_ENDPOINT = "/refreshstatus";
+
 
     private static final String ISSUER = "mybackend";
 
@@ -40,10 +43,6 @@ public class TokenController {
     private static final long REFRESH_TOKEN_EXPIRATION_DAYS = 30;
 
     private static final String INVALID_CREDENTIALS = "user or password is invalid";
-    private static final String INVALID_REFRESH_TOKEN = "Invalid refresh token";
-    private static final String EXPIRED_REFRESH_TOKEN = "Refresh token expired";
-    private static final String USER_NOT_FOUND = "User not found";
-
     private final JwtEncoder jwtEncoder;
     private final UserRepository userRepository;
     private final RefreshTokenRepository refreshTokenRepository;
@@ -114,47 +113,93 @@ public class TokenController {
                 new LoginResponse(accessToken, refreshTokenValue, ACCESS_TOKEN_EXPIRATION)
         );
     }
+    
+    
 
     // -----------------------------------------
     // ✅ REFRESH TOKEN
     // -----------------------------------------
     @PostMapping(REFRESH_ENDPOINT)
-    public ResponseEntity<LoginResponse> refresh(@RequestBody RefreshRequest request) {
+    public ResponseEntity<?> refresh(@RequestBody RefreshRequest request) {
 
-        var stored = refreshTokenRepository.findByToken(request.refreshToken())
-                .orElseThrow(() -> new BadCredentialsException(INVALID_REFRESH_TOKEN));
+        var storedOptional = refreshTokenRepository.findByToken(request.refreshToken());
 
-        if (stored.getExpiration().isBefore(Instant.now())) {
-            throw new BadCredentialsException(EXPIRED_REFRESH_TOKEN);
+        // ✅ CASO 1 — TOKEN NÃO EXISTE → FOI REVOGADO
+        if (storedOptional.isEmpty()) {
+            System.out.println("❌ Tentativa de uso de refresh token revogado ou inexistente.");
+
+            return ResponseEntity
+                    .status(401)
+                    .body("{\"erro\": \"Refresh token inválido: token foi revogado, não existe ou formato invalido\"}");
         }
 
-        var user = userRepository.findById(stored.getUserId())
-                .orElseThrow(() -> new BadCredentialsException(USER_NOT_FOUND));
+        var stored = storedOptional.get();
 
-        var scopes = user.getRoles()
+        // ✅ CASO 2 — TOKEN EXISTE, MAS ESTÁ EXPIRADO
+        if (stored.getExpiration().isBefore(Instant.now())) {
+            System.out.println("⚠️ Tentativa de uso de refresh token expirado.");
+
+            return ResponseEntity
+                    .status(401)
+                    .body("{\"erro\": \"Refresh token expirado. Faça login novamente.\"}");
+        }
+
+        // ✅ CASO 3 — TOKEN VÁLIDO → GERA NOVO ACCESS TOKEN
+        var user = userRepository.findById(stored.getUserId());
+
+        if (user.isEmpty()) {
+            return ResponseEntity
+                    .status(404)
+                    .body("{\"erro\": \"Usuário não encontrado.\"}");
+        }
+
+        var scopes = user.get().getRoles()
                 .stream()
                 .map(role -> "SCOPE_" + role.getName())
                 .collect(Collectors.joining(" "));
 
-        String newAccessToken = generateAccessToken(user.getUserId(), scopes);
+        String newAccessToken = generateAccessToken(user.get().getUserId(), scopes);
+
+        System.out.println("✅ Refresh token válido. Novo access token gerado.");
 
         return ResponseEntity.ok(
                 new LoginResponse(newAccessToken, request.refreshToken(), ACCESS_TOKEN_EXPIRATION)
         );
     }
 
+
+  
+    
+    
+
     // -----------------------------------------
     // ✅ LOGOUT
     // -----------------------------------------
     @PostMapping(LOGOUT_ENDPOINT)
     @Transactional
-    public ResponseEntity<Void> logout(@RequestBody RefreshRequest request) {
+    public ResponseEntity<String> logout(@RequestBody RefreshRequest request) {
 
-        refreshTokenRepository.findByToken(request.refreshToken())
-                .ifPresent(refreshTokenRepository::delete);
+    	var refreshTokenOptional = refreshTokenRepository.findByToken(request.refreshToken());
 
-        return ResponseEntity.ok().build();
+        if (refreshTokenOptional.isEmpty()) {
+            System.out.println("⚠️ Tentativa de logout com refresh token inexistente.");
+
+            return ResponseEntity
+                    .status(404)
+                    .body("Refresh token não encontrado ou já foi revogado.");
+        }
+
+        refreshTokenRepository.delete(refreshTokenOptional.get());
+
+        System.out.println("✅ Logout realizado com sucesso. Refresh token removido.");
+
+        return ResponseEntity.ok("Logout realizado com sucesso.");
     }
+    
+    
+    
+    
+    
 
     // -----------------------------------------
     // ✅ TESTE DE AUTENTICAÇÃO
@@ -169,4 +214,49 @@ public class TokenController {
         return "Authenticated! User: " + token.getName() +
                " | Authorities: " + token.getAuthorities();
     }
+    
+    
+    
+    @PostMapping(REFRESH_STATUS_ENDPOINT)
+    public ResponseEntity<RefreshStatusResponse> refreshStatus(@RequestBody RefreshRequest request) {
+
+        var storedOptional = refreshTokenRepository.findByToken(request.refreshToken());
+
+        // ✅ CASO 1 — INVÁLIDO (NUNCA EXISTIU OU FOI REVOGADO)
+        if (storedOptional.isEmpty()) {
+            System.out.println("❌ Token inválido: inexistente ou revogado.");
+
+            return ResponseEntity.status(401).body(
+                new RefreshStatusResponse(
+                    "INVALIDO",
+                    "Refresh token inválido."
+                )
+            );
+        }
+
+        var stored = storedOptional.get();
+
+        // ✅ CASO 2 — EXPIRADO
+        if (stored.getExpiration().isBefore(Instant.now())) {
+            System.out.println("⚠️ Token inválido: expirado.");
+
+            return ResponseEntity.status(401).body(
+                new RefreshStatusResponse(
+                    "EXPIRADO",
+                    "Refresh token expirado."
+                )
+            );
+        }
+
+        // ✅ CASO 3 — VÁLIDO
+        System.out.println("✅ Refresh token válido.");
+
+        return ResponseEntity.ok(
+            new RefreshStatusResponse(
+                "VALIDO",
+                "Refresh token está válido."
+            )
+        );
+    }
+
 }

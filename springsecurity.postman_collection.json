@@ -30,7 +30,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTUyMTgsImlhdCI6MTc2NDg5NDkxOCwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.NNXThiW5CpMJrUHFCASJ-_DX-WnD4ZZQhwPBboRWudQz2QWG5bsj6xHz6qICHMpdR1iRpXSbt36v3rKmMVpvFktE97ZE1nOUEtIGIeCRmRXU13oKzbmkbJr7l43kkO6e109KxAvrC3BEGW_yTWw81NiHj4TOXmVG9HDeBLVz6A1Q5OGSvHnUYquEdeXcTZ_JiGj7n3kDm6SxIjFAMTuuKVlcpwBleydefg3KrHCQ0_Ynlt1jGdT54EJK8WkMXubx5i2Sv9xj8qosqgEBdyNhIL8ewTiyPA9cgOFjkQO_xp_LUuPnII_eqxtGzMnPr252HOLCd9OvH0rpEW0BNtaQuA",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjUwMjExOTMsImlhdCI6MTc2NTAyMDg5Mywic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.QgrcBmSsTO3_R_cGi5YpPSWF5kjIWkD2nHzWmsxBxqPXk_sZlBu9qd8f4uycFDU4ws2nbmesb-sIWvrBGuDhpCJ0_q6RBCLXUtiRKIBOfG3kFFWFwGOA3z20F8Y0MANsToXWnRQtxHlCrctaelvT3k6rcQypesSH2QA2xV0BTaamn14fR8zXPAAB9oGYFHklaO__BpOL1Ahlsxu2to9t1UHtHLPbzn1UsUDXK8qjgeajaM4Ew8FpMNsGpgd1vhEGE8NENxZmZMkiyoS5td0-0l9aFYcGH5o8Unu7zgxwAduTqMY7lheBUKfFzdazKnq8In9Iao-lBQh8XZfgiEUxUQ",
 							"type": "string"
 						}
 					]
@@ -73,7 +73,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjQ4OTUyMTgsImlhdCI6MTc2NDg5NDkxOCwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.NNXThiW5CpMJrUHFCASJ-_DX-WnD4ZZQhwPBboRWudQz2QWG5bsj6xHz6qICHMpdR1iRpXSbt36v3rKmMVpvFktE97ZE1nOUEtIGIeCRmRXU13oKzbmkbJr7l43kkO6e109KxAvrC3BEGW_yTWw81NiHj4TOXmVG9HDeBLVz6A1Q5OGSvHnUYquEdeXcTZ_JiGj7n3kDm6SxIjFAMTuuKVlcpwBleydefg3KrHCQ0_Ynlt1jGdT54EJK8WkMXubx5i2Sv9xj8qosqgEBdyNhIL8ewTiyPA9cgOFjkQO_xp_LUuPnII_eqxtGzMnPr252HOLCd9OvH0rpEW0BNtaQuA",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxYWUyNzZiYy0xOWI5LTQ0YjQtYjVjNy1iMDJiZDE0MjZkYzQiLCJleHAiOjE3NjUwMTk4NTYsImlhdCI6MTc2NTAxOTU1Niwic2NvcGUiOiJTQ09QRV9BRE1JTiJ9.cMfKaBqe9UCYPmh0yqkxWf9mhsrjEzH6vI4rnu_RMivJpNJS1lkEy0XIFjk7U238UaGZ84rWXt8cnJZWHeupMVZh72it8iidTV1qtVYpTYq1NkDTG1HFwVW13waYJCOURxe4IN8V7eIg9hPNxDT8KKvs8aDrfIBm2RnOsiDwnnWLISnLqxYwcQDayhm1EkewpStJDg9ZQdGzgIUOCoJSdqkK-23-ylooMUBQUN8A2tmRrkC_B1EUUuYAHds6EP68nYl1txSHqbB6FfGMb57nV8QAznM2XkW715dAQHOmdpl0uO-lrIRxVmjPOBpH-L7Cq-z6SpbpiLdCMZgILLXeyw",
 							"type": "string"
 						}
 					]
@@ -165,6 +165,9 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -261,11 +264,14 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"refreshToken\": \"09d66250-5672-4216-ace7-481c564533f5\"\n}",
+					"raw": "{\n  \"refreshToken\": \"4510ac63-8fe9-44e9-9342-44452b15bf71\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -279,6 +285,52 @@
 					],
 					"path": [
 						"refresh"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"refreshToken\": \"09d66250-5672-4216-ace7-481c564533f5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/refreshstatus",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"refreshstatus"
 					]
 				},
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."

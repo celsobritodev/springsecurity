@@ -62,7 +62,7 @@ public class SecurityConfig {
 
             // ✅ CONTROLE DE ROTAS
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/login", "/refresh").permitAll()
+                .requestMatchers(HttpMethod.POST, "/login", "/refresh","/refreshstatus").permitAll()
                 .anyRequest().authenticated()
             )
 
